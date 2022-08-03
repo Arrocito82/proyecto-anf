@@ -17,7 +17,17 @@ use PHPUnit\Framework\MockObject\Rule\Parameters;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listings',[
+        'heading' => 'To Do',
+        'list'=>[
+            ['id'=>1,
+            'content'=>'do the lundry'],
+            ['id'=>2,
+            'content'=>'do homework'],
+            ['id'=>3,
+            'content'=>'watch k-drama']
+        ]
+    ]);
 });
 
 Route::get('/hello',function (){
